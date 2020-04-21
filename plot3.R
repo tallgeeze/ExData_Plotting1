@@ -20,5 +20,7 @@ selected_data <- filter(.data = data_base , date[]== c(date("2007-02-01"), date(
 with(selected_data, plot(x= date + time, y = as.numeric(Sub_metering_1),col = "black", type = "l" , ylab = "Energy sub metering", xlab = ""))
 with(selected_data, lines(x = date + time , y = as.numeric(Sub_metering_2),col = "red"))
 with(selected_data, lines(x = date + time , y = as.numeric(Sub_metering_3),col = "blue"))
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=, lwd=2.5, col=c("black", "red", "blue"), bty="o")
+
 dev.copy(png, file = "plot3.png")
 dev.off()
