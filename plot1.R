@@ -16,5 +16,5 @@ selected_data <- filter(.data = data_base , date[]== c(date("2007-02-01"), date(
 
 
 with(selected_data, hist(x= as.numeric(Global_active_power),col = "red",main = "Global Active Power", xlab = "Global Acitive Power(kilowatts)"))
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png", width = 480, height = 480)
 dev.off()
