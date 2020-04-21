@@ -23,7 +23,7 @@ with(selected_data, plot( x = date + time , y = as.numeric(Voltage), ylab = "Vol
 with(selected_data, plot(x= date + time, y = as.numeric(Sub_metering_1),col = "black", type = "l" , ylab = "Energy sub metering", xlab = ""))
 with(selected_data, lines(x = date + time , y = as.numeric(Sub_metering_2),col = "red"))
 with(selected_data, lines(x = date + time , y = as.numeric(Sub_metering_3),col = "blue"))
-
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=, lwd=2.5, col=c("black", "red", "blue"), bty="o")
 with(selected_data, plot( x = date + time , y = as.numeric(Global_reactive_power), ylab = "Global_reactive_power",type = "l", xlab = "datetime"))
 dev.copy(png, file = "plot4.png")
 dev.off()
